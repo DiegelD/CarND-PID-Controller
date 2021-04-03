@@ -28,7 +28,7 @@ The simulator provides cross-track error (CTE), that is displaying the error bet
 PIDs are widly used in the industry for controling plants that needs a continious modulted control. They are using the mechanism of contious feedback control for this. So a error can be calculated as the differencs between between the desired control point and the current control point. This is used as input for the PID-Control that applies a correction to this with its porportional, integral and derivate parts. Seen in the Imge below. 
 
 <figure>
- <img scr="./img/Controller_BP.jpg" width="830" alt="data amout plot" />
+ <img src="./img/Controller_BP.jpg" width="830" alt="data amout plot" />
  <figcaption>
  <p></p> 
  <p style="text-align: center;"> Fig. 1.1: PID-Controller with Backpropagandation</p> 
@@ -82,7 +82,7 @@ In the end it updates the steering:
 The results show an over all improvement of the RMSE. Anyhow the Error is strongly ozilating. Probably because the 'Runs_in_Track = 1500'  a not excatly covering one trakc round, so that the track parts are always changing and with it are not 1:1 compareable. Furthermore a steady increase of the Kd & Kp valuse can bee seen. The changes in the Ki values are so marignal that they cant be seen in this plot. 
 
 <figure>
- <img scr="./img/Outcome.jpg" width="830" alt="data amout plot" />
+ <img src="./img/Outcome.jpg" width="830" alt="data amout plot" />
  <figcaption>
  <p></p> 
  <p style="text-align: center;"> Fig. 3.1: Results</p> 
