@@ -1,0 +1,86 @@
+Terminal Output
+
+CTE: 0.2617 Steering Value: -0.0747905 | Epoch rmse: 0.334104 Kp: -0.100112 Ki: -0.000500558 Kd: -1.50167
+CTE: -0.0001 Steering Value: -0.157458 | Epoch rmse: 0.409899 Kp: -0.100143 Ki: -0.00050084 Kd: -1.50176
+CTE: 0.9276 Steering Value: -0.0957583 | Epoch rmse: 1.06825 Kp: -0.100847 Ki: -0.000506816 Kd: -1.50827
+CTE: -0.159 Steering Value: -0.0631763 | Epoch rmse: 0.714028 Kp: -0.100592 Ki: -0.000502281 Kd: -1.51016
+Track RMSE; 2.52628
+CTE: -0.0079 Steering Value: -0.0694141 | Epoch rmse: 0.322127 Kp: -0.100465 Ki: -0.000496674 Kd: -1.51248
+CTE: -1.1547 Steering Value: 0.127275 | Epoch rmse: 0.643261 Kp: -0.100672 Ki: -0.000502243 Kd: -1.51404
+CTE: -0.0667 Steering Value: -0.0165858 | Epoch rmse: 1.12712 Kp: -0.101222 Ki: -0.000513467 Kd: -1.51759
+CTE: 0.0549 Steering Value: -0.172899 | Epoch rmse: 0.221718 Kp: -0.101018 Ki: -0.000490964 Kd: -1.53003
+Track RMSE; 2.31423
+CTE: -0.0673 Steering Value: 0.0221083 | Epoch rmse: 0.379702 Kp: -0.101079 Ki: -0.000495013 Kd: -1.53041
+CTE: 1.8449 Steering Value: -0.0628285 | Epoch rmse: 1.24559 Kp: -0.102169 Ki: -0.000522727 Kd: -1.54188
+CTE: -0.1461 Steering Value: -0.0121364 | Epoch rmse: 0.336694 Kp: -0.101856 Ki: -0.000490408 Kd: -1.55462
+CTE: -0.0736 Steering Value: -0.311256 | Epoch rmse: 0.338682 Kp: -0.101857 Ki: -0.000490478 Kd: -1.55462
+Track RMSE; 2.30067
+CTE: -1.8218 Steering Value: 0.0691858 | Epoch rmse: 1.01691 Kp: -0.10256 Ki: -0.000517616 Kd: -1.56177
+CTE: -0.2835 Steering Value: -0.0885506 | Epoch rmse: 0.760404 Kp: -0.10236 Ki: -0.000505775 Kd: -1.5628
+CTE: 0.401 Steering Value: -0.360762 | Epoch rmse: 0.257111 Kp: -0.102227 Ki: -0.000482418 Kd: -1.56676
+CTE: 1.2536 Steering Value: -0.200974 | Epoch rmse: 0.583996 Kp: -0.102422 Ki: -0.000497808 Kd: -1.56843
+Track RMSE; 2.61843
+CTE: 0.5949 Steering Value: -0.0994794 | Epoch rmse: 1.16837 Kp: -0.103122 Ki: -0.000529599 Kd: -1.57379
+CTE: -0.1722 Steering Value: -0.033646 | Epoch rmse: 0.23001 Kp: -0.102899 Ki: -0.000474149 Kd: -1.58765
+CTE: -0.3653 Steering Value: -0.0112941 | Epoch rmse: 0.365453 Kp: -0.10295 Ki: -0.000481549 Kd: -1.58794
+CTE: 0.0926 Steering Value: -0.0107756 | Epoch rmse: 1.02727 Kp: -0.10365 Ki: -0.000521547 Kd: -1.59489
+Track RMSE; 2.7911
+CTE: -0.0269 Steering Value: -0.00229393 | Epoch rmse: 0.708972 Kp: -0.103416 Ki: -0.000499536 Kd: -1.59651
+CTE: 0.1607 Steering Value: -0.0791845 | Epoch rmse: 0.320775 Kp: -0.103287 Ki: -0.000473201 Kd: -1.59891
+CTE: -0.2098 Steering Value: 0.0400696 | Epoch rmse: 0.57029 Kp: -0.103434 Ki: -0.000489909 Kd: -1.59991
+CTE: 0.1607 Steering Value: -0.18608 | Epoch rmse: 1.13308 Kp: -0.104094 Ki: -0.000532048 Kd: -1.60498
+Track RMSE; 2.73312
+CTE: -0.1566 Steering Value: -0.175807 | Epoch rmse: 0.23011 Kp: -0.103877 Ki: -0.000457516 Kd: -1.61806
+CTE: -0.4149 Steering Value: -0.452498 | Epoch rmse: 0.386835 Kp: -0.10394 Ki: -0.000468917 Kd: -1.61846
+CTE: 0.7724 Steering Value: -0.211713 | Epoch rmse: 1.03387 Kp: -0.104636 Ki: -0.000520298 Kd: -1.62524
+CTE: -0.1887 Steering Value: 0.00786188 | Epoch rmse: 0.701089 Kp: -0.104392 Ki: -0.000489763 Kd: -1.62704
+Track RMSE; 2.35191
+CTE: -0.0415 Steering Value: -0.0877019 | Epoch rmse: 0.311561 Kp: -0.104265 Ki: -0.000455523 Kd: -1.6295
+CTE: -0.5308 Steering Value: -0.0102653 | Epoch rmse: 0.584326 Kp: -0.104431 Ki: -0.000478549 Kd: -1.63072
+CTE: -0.1531 Steering Value: -0.0405119 | Epoch rmse: 1.11043 Kp: -0.105041 Ki: -0.000528002 Kd: -1.63523
+CTE: -0.2342 Steering Value: 0.0307153 | Epoch rmse: 0.233275 Kp: -0.104826 Ki: -0.000435951 Kd: -1.64781
+Track RMSE; 2.2396
+CTE: 0.1855 Steering Value: -0.0573049 | Epoch rmse: 0.387342 Kp: -0.104889 Ki: -0.00044956 Kd: -1.6482
+CTE: 2.3719 Steering Value: -0.279471 | Epoch rmse: 1.16668 Kp: -0.105843 Ki: -0.00052464 Kd: -1.65821
+CTE: -0.0826 Steering Value: -0.052387 | Epoch rmse: 0.411602 Kp: -0.105514 Ki: -0.000438118 Kd: -1.66767
+CTE: -0.4568 Steering Value: -0.00649957 | Epoch rmse: 0.329258 Kp: -0.105485 Ki: -0.00043012 Kd: -1.66778
+Track RMSE; 2.29488
+CTE: -2.7652 Steering Value: 0.295545 | Epoch rmse: 0.912768 Kp: -0.106047 Ki: -0.000488054 Kd: -1.67346
+CTE: -0.4172 Steering Value: 0.0204246 | Epoch rmse: 0.845322 Kp: -0.105986 Ki: -0.000480177 Kd: -1.67354
+CTE: 0.4367 Steering Value: 0.00402334 | Epoch rmse: 0.258626 Kp: -0.105826 Ki: -0.000412038 Kd: -1.6793
+CTE: 1.5662 Steering Value: -0.197521 | Epoch rmse: 0.531967 Kp: -0.105979 Ki: -0.000439878 Kd: -1.68055
+Track RMSE; 2.54868
+CTE: 0.226 Steering Value: -0.349625 | Epoch rmse: 1.13388 Kp: -0.106703 Ki: -0.000508328 Kd: -1.68664
+CTE: -0.0613 Steering Value: 0.0213701 | Epoch rmse: 0.254904 Kp: -0.106464 Ki: -0.000391677 Kd: -1.69967
+CTE: -0.3242 Steering Value: -0.0117441 | Epoch rmse: 0.36529 Kp: -0.106507 Ki: -0.000403123 Kd: -1.69988
+CTE: -0.0278 Steering Value: -0.0114984 | Epoch rmse: 1.00394 Kp: -0.107189 Ki: -0.000473863 Kd: -1.70681
+Track RMSE; 2.75801
+CTE: -0.3087 Steering Value: -0.0429444 | Epoch rmse: 0.679293 Kp: -0.106953 Ki: -0.000430549 Kd: -1.70861
+CTE: 0.5362 Steering Value: -0.162799 | Epoch rmse: 0.310353 Kp: -0.106831 Ki: -0.00038533 Kd: -1.71094
+CTE: 0.242 Steering Value: -0.0682223 | Epoch rmse: 0.556656 Kp: -0.106977 Ki: -0.000412876 Kd: -1.71197
+CTE: 0.1617 Steering Value: -0.0863961 | Epoch rmse: 1.10188 Kp: -0.10762 Ki: -0.000480691 Kd: -1.71706
+Track RMSE; 2.64818
+CTE: 0.1188 Steering Value: -0.180023 | Epoch rmse: 0.241988 Kp: -0.107396 Ki: -0.00035517 Kd: -1.72976
+CTE: 0.044 Steering Value: 0.0359422 | Epoch rmse: 0.385136 Kp: -0.107455 Ki: -0.000370805 Kd: -1.73011
+CTE: 1.0249 Steering Value: -0.105944 | Epoch rmse: 1.00539 Kp: -0.108125 Ki: -0.000443846 Kd: -1.73677
+CTE: -0.132 Steering Value: -0.0324434 | Epoch rmse: 0.671846 Kp: -0.107883 Ki: -0.000395837 Kd: -1.7387
+Track RMSE; 2.30436
+CTE: 0.0054 Steering Value: -0.0275905 | Epoch rmse: 0.315886 Kp: -0.107762 Ki: -0.000349698 Kd: -1.7409
+CTE: -0.5406 Steering Value: 0.0756858 | Epoch rmse: 0.571927 Kp: -0.107919 Ki: -0.000379529 Kd: -1.74205
+CTE: -0.1252 Steering Value: -0.032758 | Epoch rmse: 1.08992 Kp: -0.108529 Ki: -0.000447171 Kd: -1.74672
+CTE: -0.283 Steering Value: 0.0248761 | Epoch rmse: 0.249433 Kp: -0.108301 Ki: -0.000316917 Kd: -1.75906
+Track RMSE; 2.22717
+CTE: 0.1866 Steering Value: -0.0796129 | Epoch rmse: 0.403111 Kp: -0.108368 Ki: -0.000333992 Kd: -1.75947
+CTE: 2.378 Steering Value: -0.389773 | Epoch rmse: 1.11791 Kp: -0.109234 Ki: -0.000420362 Kd: -1.76846
+CTE: -0.1449 Steering Value: -0.0649163 | Epoch rmse: 0.435789 Kp: -0.108909 Ki: -0.000315377 Kd: -1.77669
+CTE: -0.3826 Steering Value: -0.0186883 | Epoch rmse: 0.340579 Kp: -0.108874 Ki: -0.000304281 Kd: -1.77685
+Track RMSE; 2.29739
+CTE: -2.6737 Steering Value: 0.337377 | Epoch rmse: 0.873242 Kp: -0.109381 Ki: -0.000365591 Kd: -1.7819
+CTE: -0.2639 Steering Value: 0.0402073 | Epoch rmse: 0.817178 Kp: -0.10933 Ki: -0.00035767 Kd: -1.78195
+CTE: 0.4894 Steering Value: -0.156449 | Epoch rmse: 0.24046 Kp: -0.109179 Ki: -0.000277461 Kd: -1.78788
+CTE: 1.1172 Steering Value: -0.171695 | Epoch rmse: 0.421071 Kp: -0.109262 Ki: -0.000297158 Kd: -1.78846
+Track RMSE; 2.35195
+CTE: 0.8936 Steering Value: -0.279831 | Epoch rmse: 1.19021 Kp: -0.110262 Ki: -0.000389714 Kd: -1.79904
+CTE: -0.2227 Steering Value: 0.00845182 | Epoch rmse: 0.288809 Kp: -0.109975 Ki: -0.000246441 Kd: -1.81366
+CTE: -0.2792 Steering Value: -0.00642361 | Epoch rmse: 0.373908 Kp: -0.11001 Ki: -0.000255073 Kd: -1.81379
+Segmentation fault (core dumped)
