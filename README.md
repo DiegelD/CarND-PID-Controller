@@ -8,9 +8,9 @@
 
 ## Project Basics
 
-The goal of this project is to implement in C++ a PID controller to control the steering angle for driving a car around a virtual track using the [Udacity simulator](https://github.com/udacity/self-driving-car-sim/releases), as well as tuning each PID gain in order to calculate a steering angle that keeps the car on the track.
+The goal of this project is to implement in C++ a PID controller to control the steering angle for driving a car around a virtual track using the [Udacity simulator](https://github.com/udacity/self-driving-car-sim/releases), and in addition tuning each PID gain in order to calculate a steering angle that keeps the car on the track.
 
-The simulator provides cross-track error (CTE), that is displaying the error between the desired and the current path, via websocket. The PID (proportional-integral-differential) controller takes this error as input and controls the steering commands to drive the car around the simulator track.
+The simulator provides the cross-track error (CTE), which expresses the error between the desired and the current path. The PID (proportional-integral-differential) controller takes this error as input and controls the steering commands to drive the car around the simulator track.
 
 **Project Steps**
 - 1) Implement a PID Controller for steering the car
@@ -25,7 +25,12 @@ The simulator provides cross-track error (CTE), that is displaying the error bet
 ---
 ## 1) Brief introduction PID
 
-PIDs are widely used in the industry for controlling plants that needs a continuous modulated control. They are using the mechanism of continues feedback control for this. So, an error can be calculated as the differences between the desired control point and the current control point. This is used as input for the PID-Control that applies a correction to this with its proportional, integral and derivate parts. Seen in the Image below. 
+PIDs are widely used in the industry for controlling plants that need a continuous modulated control. They are using the mechanism of continues feedback control. So, an error can be calculated as the differences between the desired control point and the current control point. This is used as input for the PID-Controller that applies a correction to this error with its proportional, integral and derivate parts. Seen in the code and image below. 
+
+The steering parameter gets updated as followed, where Kp, Ki, Kd are the Controller Parameters:
+
+`steering_angle = Kp * p_err  + Ki * i_err + Kd * d_err`
+
 
 <figure>
  <img src="./img/Controller_BP.jpg" width="830" alt="data amout plot" />
@@ -36,27 +41,27 @@ PIDs are widely used in the industry for controlling plants that needs a continu
 </figure>
  <p></p>
  
-To control the plant, car in our case, the controller uses following three parameters:
+To control the plant, a car in our case, the controller uses following three parameters:
 
-- P-Term: Is proportional to the current difference between desired and current control error value. For example, the further the car is a way from the desired path the bigger the control output will be. However, a P-Controller by itself will always an error in the system remain. Hence it needs an error to get an active control output!
+- P-Term: Is proportional to the current difference between desired and current control error.  For example, the further the car is a way from the desired path the bigger the control output will be. However, a P-Controller by itself will always remain an error in the system. Hence it needs an error to get an active control output!
 
-- I-Term: Accumulates the past errors and integrates them over the time. For example, is using a P-Controller with the car a residual error will remain and this error accumulated increases the I -value that ceased to grow if no error is left. This is good to compensate Offset errors, that can remain the mechanic of the steering actuator. 
+- I-Term: Accumulates the past errors and integrates them over the time. For example, if using a P-Controller with the car a residual error will remain and this error accumulated increases the I -value that ceased to grow if no error is left. This is good to compensate offset errors, that can remain the mechanic of the steering actuator. 
 
 - D-Term: Best estimate of the future error, based on the rate of change. The higher the rapid error change rate of the car is, the greater the controller reaction to it will be.
 
 ## 2) PID-Parameter tuning
 For tuning a PID-Controller are several state of the art [ approaches ]( https://en.wikipedia.org/wiki/PID_controller ) available.  In this project is a "quick & dirty" manual tuning [approch](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops ) used.
 
-Following Parameters are identified  :
+Following Parameters are manually identified:
 ```
 Kp = -0.1
 Ki = -0.005
 kd = -1.5
 ```
 
-## 3) Fine tuning the parameters using a optimization technique
+## 3) Fine tuning the parameters using a Backpropagandation as optimization technique
 
-Inspired by this [project](https://github.com/antevis/CarND_T2_P4_PID) the idea rose to modify and improve the Backpropagandation approach. From previous Neuronal Network projects I got already a familiar with this Backpropagandation and I also wanted to see how it behavior with a controller. Also because other approaches with a local hill climber, didn’t seen much promising to earn new parameters and to modify the approach came from the background that also in the inspired project no big improve mends could be made. 
+Inspired by this [project](https://github.com/antevis/CarND_T2_P4_PID) the idea rose to modify and improve the Backpropagandation approach. From previous Neuronal Network projects in my repository I got already familiar with Backpropagandation and I also wanted to see how it behavior with a controller. Furthermore because other approaches with a local hill climber, didn’t seen much promising since the deliver not the same optimal values [twiddle1]( https://medium.com/intro-to-artificial-intelligence/pid-controller-udacitys-self-driving-car-nanodegree-c4fd15bdc981) [twiddle2]( https://github.com/gdangelo/CarND-PID-Control-Project). 
 
 ### The optimization algorithms:
 
@@ -72,14 +77,10 @@ void PID::adjust(double &Kx, double dx, double dE) {
 }
 ```
 
-The optimization update is done after an Epoch of training. The Epochs as chosen in respect of the program runs and are tuned with the parameter 'EpochLength_ =375' . Here is a conflict between specialization and generalization of the update. Means the longer the length the more of the track is considered in the "training". To track the results and the method Error is calculated as Root Means Sequard Error over each Epoch and gets accumulated over the hole track. The Program runs to reach a full track run is saved here 'Runs_in_Track = 1500'. *important* Epoch Length have to fit into Runs_in_Track without modulo. 
-
-In the end it updates the steering:
-
-`steering_angle = Kp * p_err  + Ki * i_err + Kd * d_err`
+The optimization update is done after an Epoch of training. The Epochs as chosen in respect of the program runs and are tuned with the parameter 'EpochLength_ =375' . Here is a conflict between specialization and generalization of the update. Means the longer the length the more of the track is considered in the "training". To track the results and the method error is calculated as Root Means Sequard Error (RMSE) over each Epoch and gets accumulated over the hole track. With the parameter 'Runs_in_Track = 1500' the length of the track is saved in the software. *important* Epoch Length have to fit into Runs_in_Track without modulo. 
 
 ### Results
-The results show an overall improvement of the RMSE. Anyhow the Error is strongly oscillating. Probably because the 'Runs_in_Track = 1500’ a not exactly covering one track round, so that the track parts are always changing and with it are not 1:1 comparable. Furthermore, a steady increase of the Kd & Kp values can be seen. The changes in the Ki values are so marginal that they can’t be seen in this plot. 
+The results show an overall improvement of the RMSE. Anyhow the Error is strongly oscillating. A first investigation have given the clarity that 'Runs_in_Track = 1500’ a not exactly covering one track round, so that the track parts are always changing and with this are not 1:1 comparable. Furthermore, a steady increase of the Kd & Kp values can be seen. The changes in the Ki values are so marginal that they can’t be seen in this plot. 
 
 <figure>
  <img src="./img/Outcome.jpg" width="830" alt="data amout plot" />
@@ -94,6 +95,7 @@ The results show an overall improvement of the RMSE. Anyhow the Error is strongl
  The attempt looks promising. However, several improvements have to be made before this algorithm can be further developed
  1) Setting the right Track runs
  2) Integrating a sign error into the algorithms. Till know it can actually just go into on direction because just the root mean square errros a taken into count. One approach count be to lower the 'EpochLength_ ' so that a more specify learning could be done in combination with changing the 'p/id_error_epoch' from RMSE to a direct CTE margin and lowering the learning rate ' LearnRate_ = 1e-2', due to the fact that the learning will happened anyhow more frequent.
+3) Checking out if the optimization reaches a saturation by track runs x >> 16 (current runs)
  
  Code from the parameter adjustments that should be changed 
  
@@ -152,7 +154,7 @@ Fellow students have put together a guide to Windows set-up for the project [her
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./pid -0.11 -0.0005 -1.80` . 
+4. Run it: `./pid -0.11 -0.0005 -1.80`  
 
 Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
 
